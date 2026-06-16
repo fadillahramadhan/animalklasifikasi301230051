@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang AnimalAI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root { --primary:#2563eb; --secondary:#7c3aed; --bg-dark:#0f172a; --bg-card:#1e293b; --border:#334155; --text-muted:#94a3b8; }
+    * { font-family:"Inter",sans-serif; }
+    body { background:var(--bg-dark); color:#e2e8f0; }
+    .navbar { background:rgba(15,23,42,.95)!important; backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+    .navbar-brand span { color:var(--primary); }
+    .card-dark { background:var(--bg-card); border:1px solid var(--border); border-radius:14px; }
+    .section-title { font-size:1.4rem; font-weight:700; color:#f1f5f9; }
+    .badge-ai { font-size:.65rem; background:var(--primary); padding:2px 7px; border-radius:999px; }
+    footer { background:rgba(15,23,42,.9); border-top:1px solid var(--border); color:var(--text-muted); font-size:.85rem; }
+    .arch-item { background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:10px; padding:.8rem 1rem; margin-bottom:.5rem; }
+    .arch-item .layer-name { font-weight:600; color:#60a5fa; font-size:.9rem; }
+    .arch-item .layer-desc { color:var(--text-muted); font-size:.8rem; }
+    .metric-badge { background:rgba(37,99,235,.15); border:1px solid rgba(37,99,235,.3); border-radius:10px; padding:.8rem 1.2rem; text-align:center; }
+    .metric-badge .val { font-size:1.6rem; font-weight:700; color:#60a5fa; }
+    .metric-badge .lbl { font-size:.75rem; color:var(--text-muted); }
+    table.dark-table { color:#e2e8f0; }
+    table.dark-table th { background:rgba(37,99,235,.15); color:#93c5fd; font-size:.82rem; font-weight:600; }
+    table.dark-table td { font-size:.82rem; border-color:var(--border)!important; }
+    table.dark-table tbody tr { background:transparent; }
+    table.dark-table tbody tr:hover { background:rgba(255,255,255,.04); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
+      🐾 <span>AnimalAI</span> <span class="badge-ai ms-1">CNN</span>
+    </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="/">🏠 Beranda</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/about">ℹ️ Tentang</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5">
+  <div class="mb-4">
+    <span class="badge text-bg-primary mb-2">Tugas 10 · Kecerdasan Buatan</span>
+    <h1 class="section-title" style="font-size:2rem">Tentang AnimalAI</h1>
+    <p class="text-secondary">Dokumentasi teknis sistem klasifikasi jenis hewan berbasis CNN</p>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Identitas -->
+    <div class="col-lg-4">
+      <div class="card-dark p-4 h-100">
+        <h5 class="section-title" style="font-size:1.1rem"><i class="bi bi-person-badge me-2 text-primary"></i>Identitas Mahasiswa</h5>
+        <table class="table dark-table table-borderless mb-0">
+          <tr><td class="text-secondary" style="width:100px">Nama</td><td>Muhammad Fadillah Ramadhan</td></tr>
+          <tr><td class="text-secondary">NIM</td><td>301240051</td></tr>
+          <tr><td class="text-secondary">Program</td><td>S1 Teknik Informatika</td></tr>
+          <tr><td class="text-secondary">Mata Kuliah</td><td>Kecerdasan Buatan</td></tr>
+          <tr><td class="text-secondary">Tugas</td><td>Tugas 10 — CNN</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Dataset -->
+    <div class="col-lg-8">
+      <div class="card-dark p-4 h-100">
+        <h5 class="section-title" style="font-size:1.1rem"><i class="bi bi-database me-2 text-primary"></i>Dataset: Animal Image Dataset 151 classes</h5>
+        <p class="text-secondary" style="font-size:.88rem">
+          Dataset <strong>Animal Image Dataset 151 classes</strong> dari Kaggle berisi lebih dari 26.000 gambar hewan dalam 10 kelas yang dikumpulkan dari Google Images.
+          Dataset ini banyak digunakan sebagai benchmark untuk klasifikasi gambar menggunakan CNN.
+        </p>
+        <div class="row g-2 mb-3">
+          <div class="col-4 col-md-2" style="text-align:center">
+            <div class="metric-badge"><div class="val">10</div><div class="lbl">Kelas</div></div>
+          </div>
+          <div class="col-4 col-md-3" style="text-align:center">
+            <div class="metric-badge"><div class="val">26K+</div><div class="lbl">Total Gambar</div></div>
+          </div>
+          <div class="col-4 col-md-2" style="text-align:center">
+            <div class="metric-badge"><div class="val">80%</div><div class="lbl">Train Split</div></div>
+          </div>
+          <div class="col-4 col-md-2" style="text-align:center">
+            <div class="metric-badge"><div class="val">20%</div><div class="lbl">Val Split</div></div>
+          </div>
+          <div class="col-4 col-md-3" style="text-align:center">
+            <div class="metric-badge"><div class="val">Kaggle</div><div class="lbl">Sumber</div></div>
+          </div>
+        </div>
+        <p class="mb-0" style="font-size:.82rem;color:var(--text-muted)">
+          🔗 <a href="https://www.kaggle.com/datasets/sharansmenon/animals141" target="_blank" class="text-primary">
+            kaggle.com/datasets/sharansmenon/animals141
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Arsitektur Model -->
+    <div class="col-12">
+      <div class="card-dark p-4">
+        <h5 class="section-title" style="font-size:1.1rem"><i class="bi bi-diagram-3 me-2 text-primary"></i>Arsitektur Model CNN — MobileNetV2 + Custom Head</h5>
+        <p class="text-secondary" style="font-size:.88rem">
+          Model menggunakan <strong>Transfer Learning</strong> dengan base model <strong>MobileNetV2</strong> yang telah dilatih pada dataset ImageNet (1.4 juta gambar, 1000 kelas).
+          Layer-layer di base model dibekukan saat fase awal training, kemudian di-fine-tune pada fase kedua.
+        </p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <h6 class="text-secondary mb-2">📥 Input</h6>
+            <div class="arch-item">
+              <div class="layer-name">Input Layer</div>
+              <div class="layer-desc">Shape: (128, 128, 3) — RGB image, normalized [0,1]</div>
+            </div>
+
+            <h6 class="text-secondary mb-2 mt-3">🔷 Base Model</h6>
+            <div class="arch-item">
+              <div class="layer-name">MobileNetV2 (Frozen → Fine-tuned)</div>
+              <div class="layer-desc">Pre-trained ImageNet. ~2.3M parameters. Ekstraksi fitur otomatis.</div>
+            </div>
+            <div class="arch-item">
+              <div class="layer-name">GlobalAveragePooling2D</div>
+              <div class="layer-desc">Mereduksi feature map spatial menjadi vektor 1D</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h6 class="text-secondary mb-2">🔷 Custom Head</h6>
+            <div class="arch-item">
+              <div class="layer-name">BatchNormalization</div>
+              <div class="layer-desc">Normalisasi aktivasi untuk stabilitas training</div>
+            </div>
+            <div class="arch-item">
+              <div class="layer-name">Dense(256, ReLU) + Dropout(0.5)</div>
+              <div class="layer-desc">Fully connected layer + regularisasi</div>
+            </div>
+            <div class="arch-item">
+              <div class="layer-name">Dense(128, ReLU) + Dropout(0.3)</div>
+              <div class="layer-desc">Fully connected layer kedua</div>
+            </div>
+            <div class="arch-item">
+              <div class="layer-name">Dense(10, Softmax) — Output</div>
+              <div class="layer-desc">Probabilitas untuk 151 kelas hewan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Training Config -->
+    <div class="col-md-6">
+      <div class="card-dark p-4 h-100">
+        <h5 class="section-title" style="font-size:1.1rem"><i class="bi bi-sliders me-2 text-primary"></i>Konfigurasi Training</h5>
+        <table class="table dark-table table-sm">
+          <tbody>
+            <tr><td class="text-secondary">Optimizer</td><td>Adam</td></tr>
+            <tr><td class="text-secondary">Learning Rate (Phase 1)</td><td>1e-3</td></tr>
+            <tr><td class="text-secondary">Learning Rate (Phase 2)</td><td>1e-5</td></tr>
+            <tr><td class="text-secondary">Loss Function</td><td>Categorical Crossentropy</td></tr>
+            <tr><td class="text-secondary">Batch Size</td><td>32</td></tr>
+            <tr><td class="text-secondary">Epochs</td><td>20 (Phase 1: 10, Phase 2: 10)</td></tr>
+            <tr><td class="text-secondary">Input Size</td><td>128 × 128 × 3</td></tr>
+            <tr><td class="text-secondary">Data Augmentation</td><td>Rotasi, flip, zoom, shift</td></tr>
+            <tr><td class="text-secondary">Early Stopping</td><td>Patience = 5</td></tr>
+            <tr><td class="text-secondary">ReduceLROnPlateau</td><td>Factor=0.5, Patience=3</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="col-md-6">
+      <div class="card-dark p-4 h-100">
+        <h5 class="section-title" style="font-size:1.1rem"><i class="bi bi-stack me-2 text-primary"></i>Tech Stack</h5>
+        <table class="table dark-table table-sm">
+          <thead><tr><th>Komponen</th><th>Teknologi</th></tr></thead>
+          <tbody>
+            <tr><td class="text-secondary">Backend</td><td>Flask 3.x (Python)</td></tr>
+            <tr><td class="text-secondary">Deep Learning</td><td>TensorFlow 2.x / Keras</td></tr>
+            <tr><td class="text-secondary">Base Model</td><td>MobileNetV2 (ImageNet)</td></tr>
+            <tr><td class="text-secondary">Preprocessing</td><td>Pillow, NumPy</td></tr>
+            <tr><td class="text-secondary">Frontend</td><td>Bootstrap 5 + Vanilla JS</td></tr>
+            <tr><td class="text-secondary">Visualisasi</td><td>Matplotlib, Seaborn</td></tr>
+            <tr><td class="text-secondary">Evaluasi</td><td>Scikit-learn</td></tr>
+            <tr><td class="text-secondary">Deployment</td><td>Railway / Render</td></tr>
+            <tr><td class="text-secondary">Source Code</td><td>GitHub</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Kelas Hewan -->
+    <div class="col-12">
+      <div class="card-dark p-4">
+        <h5 class="section-title" style="font-size:1.1rem"><i class="bi bi-grid me-2 text-primary"></i>151 Kelas Hewan</h5>
+        <div class="table-responsive">
+          <table class="table dark-table table-sm">
+            <thead><tr><th>#</th><th>Label Indonesia</th><th>Nama Latin</th><th>Folder Dataset</th><th>Emoji</th></tr></thead>
+            <tbody>
+              {% for row in [
+                (1,"Anjing","Canis lupus familiaris","cane","🐕"),
+                (2,"Kucing","Felis catus","gatto","🐈"),
+                (3,"Kuda","Equus ferus caballus","cavallo","🐎"),
+                (4,"Laba-laba","Araneae","ragno","🕷️"),
+                (5,"Kupu-kupu","Lepidoptera","farfalla","🦋"),
+                (6,"Ayam","Gallus gallus domesticus","gallina","🐔"),
+                (7,"Domba","Ovis aries","pecora","🐑"),
+                (8,"Sapi","Bos taurus","mucca","🐄"),
+                (9,"Tupai","Sciuridae","scoiattolo","🐿️"),
+                (10,"Gajah","Loxodonta / Elephas","elefante","🐘"),
+              ] %}
+              <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td><td><em>{{ row[2] }}</em></td><td><code>{{ row[3] }}</code></td><td>{{ row[4] }}</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="py-4 mt-3 text-center">
+  <div class="container">
+    <p class="mb-1">🐾 <strong>AnimalAI</strong> — Klasifikasi Jenis Hewan dengan CNN</p>
+    <p class="mb-0">Tugas 10 · Muhammad Fadillah Ramadhan · 301240051</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
