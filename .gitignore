@@ -5,8 +5,6 @@ __pycache__/
 *.pyd
 .Python
 .env
-*.h5
-model/
 static/uploads/*
 !static/uploads/.gitkeep
 model_training/raw-img/
